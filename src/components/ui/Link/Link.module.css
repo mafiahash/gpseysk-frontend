@@ -1,0 +1,43 @@
+.Link {
+	text-decoration: none;
+	color: #052e1c;
+	font-size: 14px;
+	transition: 0.3s all;
+	border: 1px solid #052e1c;
+	border-radius: 80px;
+	padding: 11px 18px;
+	min-width: 150px;
+	min-height: 40px;
+	height: max-content;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Link:hover {
+	background: #052e1c;
+	color: #ffffff;
+}
+.white.Link {
+	color: #ffffff;
+	border: 1px solid #ffffff;
+}
+.white.Link:hover {
+	background: #ffffff;
+	color: #052e1c;
+}
+@media screen and (max-width: 1240px) {
+	.Link {
+		font-size: 12px;
+		padding: 9px 16px;
+		min-height: 35px;
+		min-width: 120px;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.Link {
+		font-size: 11px;
+		padding: 8px 14px;
+		min-height: 30px;
+	}
+}

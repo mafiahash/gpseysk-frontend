@@ -1,0 +1,77 @@
+.header {
+	padding: 20px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo {
+	position: relative;
+	display: block;
+	width: 240px;
+	height: 40px;
+}
+.links {
+	display: flex;
+	gap: 4px;
+}
+.links a {
+	text-decoration: none;
+	color: #052e1c;
+	border-radius: 80px;
+	padding: 11px 18px;
+	min-height: 40px;
+	transition: 0.3s all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid transparent;
+}
+.links a:hover {
+	border: 1px solid rgba(5, 46, 28, 0.23);
+	background: rgba(5, 46, 28, 0.15);
+}
+.white .links a {
+	color: #ffffff;
+}
+.white .links a:hover {
+	border: 1px solid rgba(255, 255, 255, 0.23);
+	background: rgba(255, 255, 255, 0.15);
+}
+.menuBurger {
+	cursor: pointer;
+	display: none;
+	position: relative;
+	width: 24px;
+	height: 24px;
+}
+
+@media screen and (max-width: 1240px) {
+	.logo {
+		width: 185px;
+		height: 31px;
+	}
+	.links a {
+		padding: 9px 16px;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.links a {
+		padding: 8px 14px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		padding: 15px 10px;
+	}
+	.menuBurger {
+		display: block;
+	}
+	.links a {
+		display: none;
+	}
+	.header > a:nth-of-type(2) {
+		display: none;
+	}
+}

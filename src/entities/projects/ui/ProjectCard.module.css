@@ -1,0 +1,53 @@
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-decoration: none;
+	color: #fff;
+}
+.card::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(197deg, rgba(5, 46, 28, 0) 39.65%, #000000 88.5%);
+
+	z-index: -1;
+	pointer-events: none;
+}
+.card:hover::after {
+	background: linear-gradient(197deg, rgba(5, 46, 28, 0) 39.65%, #052e1c 88.5%);
+}
+.card img {
+	z-index: -1;
+	object-fit: cover;
+}
+.default {
+	grid-column: span 1;
+	aspect-ratio: 1/1.2;
+}
+.big {
+	grid-column: span 2;
+	grid-row: span 1;
+	aspect-ratio: 2/1.2;
+}
+.bigger {
+	grid-column: span 3;
+	aspect-ratio: 3/1.2;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.info big {
+	opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+	.bigger {
+		grid-column: span 2;
+		aspect-ratio: 2;
+	}
+}

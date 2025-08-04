@@ -1,0 +1,19 @@
+.cover {
+	height: 71vh;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.texts {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	color: #fff;
+	width: 100%;
+}

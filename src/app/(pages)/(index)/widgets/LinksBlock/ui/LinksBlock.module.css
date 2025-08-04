@@ -1,0 +1,39 @@
+.Nav a {
+	position: relative;
+
+	background-color: #052e1c;
+	aspect-ratio: 2/1;
+	grid-column: span 2;
+
+	text-decoration: none;
+	color: #fff;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.Nav a h2 {
+	z-index: 2;
+}
+
+.background {
+	object-fit: cover;
+}
+.card::before {
+	content: '';
+	position: absolute;
+	inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+	z-index: 1;
+	background: linear-gradient(190deg, rgba(0, 0, 0, 0) 31.96%, #000 112.15%);
+	pointer-events: none; /* Чтобы не мешал кликам */
+}
+.card:hover::before {
+	background: linear-gradient(190deg, rgba(0, 0, 0, 0) 31.96%, #052e1c 112.15%);
+}
+
+@media screen and (max-width: 768px) {
+	.Nav a.small {
+		aspect-ratio: 1/1;
+		grid-column: span 1;
+	}
+}

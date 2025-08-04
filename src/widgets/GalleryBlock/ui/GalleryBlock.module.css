@@ -1,0 +1,47 @@
+.Photo:first-of-type {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+.Photo {
+	aspect-ratio: 1.2/1;
+}
+.button {
+	background-color: #052e1c;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.icon {
+	align-self: flex-end;
+	position: relative;
+	width: 45px;
+	height: 45px;
+	z-index: 2;
+}
+@media screen and (max-width: 1240px) {
+	.icon {
+		width: 45px;
+		height: 45px;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.icon {
+		width: 40px;
+		height: 40px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.icon {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.icon {
+		width: 25px;
+		height: 25px;
+	}
+}

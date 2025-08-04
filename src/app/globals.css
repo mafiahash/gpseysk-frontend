@@ -1,42 +1,567 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/*RESET CSS*/
 html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+	display: block;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img,
+object,
+embed {
+	max-width: 100%;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type='radio'] {
+	vertical-align: text-bottom;
+}
+input[type='checkbox'] {
+	vertical-align: bottom;
+}
+.ie7 input[type='checkbox'] {
+	vertical-align: baseline;
+}
+.ie6 input {
+	vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+	font: 99% sans-serif;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+small {
+	font-size: 85%;
+}
+
+strong {
+	font-weight: bold;
+}
+
+td,
+td img {
+	vertical-align: top;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, sans-serif;
+}
+
+.clickable,
+label,
+input[type='button'],
+input[type='submit'],
+input[type='file'],
+button {
+	cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+button,
+input[type='button'] {
+	width: auto;
+	overflow: visible;
+	font-family: Manrope;
+}
+
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '\0020';
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom: 1;
+}
+
+img {
+	pointer-events: none;
+}
+/*RESET CSS*/
+
+/* FONTS */
+/* manrope-200 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 200;
+	src: url('/fonts/Manrope-Thin.woff2') format('woff2');
+}
+/* manrope-300 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/fonts/Manrope-Light.woff2') format('woff2');
+}
+/* manrope-regular - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Manrope-Regular.woff2') format('woff2');
+}
+/* manrope-500 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/fonts/Manrope-Medium.woff2') format('woff2');
+}
+/* manrope-600 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 600;
+	src: url('/fonts/Manrope-Semibold.woff2') format('woff2');
+}
+/* manrope-700 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/Manrope-Bold.woff2') format('woff2');
+}
+/* manrope-800 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 800;
+	src: url('/fonts/Manrope-ExtraBold.woff2') format('woff2');
+}
+/* STYLES */
+html,
+body {
+	font-family: 'Manrope';
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body.locked {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
+.wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 4px;
+	grid-auto-flow: dense;
+}
+.rounded {
+	border-radius: 24px;
+	overflow: hidden;
+}
+.pad {
+	padding: 30px;
+}
+.space {
+	margin-bottom: 80px;
+}
+.gap {
+	margin-bottom: 30px;
+}
+
+h1 {
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 90%;
+	letter-spacing: -4.32px;
+}
+h2 {
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 90%;
+	letter-spacing: -2.88px;
+}
+h3 {
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: -1.6px;
+}
+h4 {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 100%;
+	letter-spacing: -0.96px;
+}
+
+p {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 105%;
+	letter-spacing: -0.32px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: -0.02em;
+}
+small {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: -0.28px;
+}
+.smaller {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100%;
+	letter-spacing: -0.24px;
+}
+big {
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 100%;
+	letter-spacing: -0.96px;
+}
+
+.notFound {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	text-align: center;
+	max-width: 550px;
+	margin: 100px auto;
+}
+
+@media screen and (max-width: 1240px) {
+	.rounded {
+		border-radius: 20px;
+	}
+	.pad {
+		padding: 25px;
+	}
+	h1 {
+		font-size: 57px;
+		letter-spacing: -3.42px;
+	}
+	h2 {
+		font-size: 38px;
+		letter-spacing: -2.28px;
+	}
+	h3 {
+		font-size: 28px;
+		letter-spacing: -1.5px;
+	}
+	h4 {
+		font-size: 20px;
+		letter-spacing: -0.8px;
+	}
+
+	.smaller {
+		font-size: 10px;
+		letter-spacing: -0.2px;
+	}
+	big {
+		font-size: 18px;
+		letter-spacing: -0.54px;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.rounded {
+		border-radius: 15px;
+	}
+	.pad {
+		padding: 20px;
+	}
+	.space {
+		margin-bottom: 50px;
+	}
+	.gap {
+		margin-bottom: 25px;
+	}
+	h1 {
+		font-size: 45px;
+		letter-spacing: -2.7px;
+	}
+	h2 {
+		font-size: 32px;
+		letter-spacing: -1.92px;
+	}
+	h3 {
+		font-size: 24px;
+		letter-spacing: -1px;
+	}
+	h4 {
+		font-size: 20px;
+		letter-spacing: -0.64px;
+	}
+
+	.smaller {
+		font-size: 9px;
+		letter-spacing: -0.18px;
+	}
+	big {
+		font-size: 14px;
+		letter-spacing: -0.42px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.rounded {
+		border-radius: 15px;
+	}
+	.pad {
+		padding: 15px;
+	}
+	.space {
+		margin-bottom: 30px;
+	}
+	.gap {
+		margin-bottom: 20px;
+	}
+	h1 {
+		font-size: 33px;
+		letter-spacing: -1.98px;
+	}
+	h2 {
+		font-size: 26px;
+		letter-spacing: -1.32px;
+	}
+	h3 {
+		font-size: 22px;
+		letter-spacing: -0.9px;
+	}
+	h4 {
+		font-size: 18px;
+		letter-spacing: -0.6px;
+	}
+
+	big {
+		font-size: 17px;
+		letter-spacing: -0.39px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.pad {
+		padding: 15px;
+	}
+	.gap {
+		margin-bottom: 10px;
+	}
 }

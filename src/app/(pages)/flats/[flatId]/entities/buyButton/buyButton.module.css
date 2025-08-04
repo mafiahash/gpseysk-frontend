@@ -1,0 +1,19 @@
+.button {
+	width: 100%;
+	min-height: 55px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 2px solid rgba(255, 255, 255, 0.37);
+	background: #052e1c;
+	color: #fff;
+	border-radius: 80px;
+}
+.disabled {
+	cursor: auto;
+	border-radius: 80px;
+	border: 2px solid rgba(255, 255, 255, 0.37);
+	background: rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,27 @@
+.plan {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	grid-column: 1/6;
+	background: rgba(5, 46, 28, 0.04);
+}
+.plan img {
+	width: 75%;
+	aspect-ratio: 1/1;
+	object-fit: fill;
+}
+
+.tabs {
+	display: flex;
+	gap: 4px;
+}
+.btn {
+	min-width: fit-content;
+}
+
+@media screen and (max-width: 768px) {
+	.plan {
+		grid-column: 1/3;
+	}
+}

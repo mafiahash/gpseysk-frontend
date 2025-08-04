@@ -1,0 +1,43 @@
+.Photo {
+	aspect-ratio: 1/0.6;
+}
+.h2 {
+	text-align: center;
+	padding-bottom: 16px;
+	grid-column: 2/4;
+}
+.Photo:nth-child(odd) {
+	grid-column: 1/3;
+}
+.Photo:nth-child(even) {
+	grid-column: 3/5;
+}
+.Photo:nth-child(3n) {
+	grid-column: 1 / 5;
+}
+.backButton {
+	opacity: 0.4;
+	grid-column: 2;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+	.h2 {
+		grid-column: 1/4;
+		padding-bottom: 6px;
+	}
+	.Photo:nth-child(odd) {
+		grid-column: 1;
+	}
+	.Photo:nth-child(even) {
+		grid-column: 2;
+	}
+	.Photo:nth-child(3n) {
+		grid-column: 1 / 4;
+	}
+	.backButton {
+		grid-column: 1;
+		margin-bottom: 10px;
+	}
+}

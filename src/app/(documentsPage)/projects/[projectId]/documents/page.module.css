@@ -1,0 +1,36 @@
+.h2 {
+	text-align: center;
+	padding-bottom: 16px;
+	grid-column: 2/4;
+}
+.backButton {
+	opacity: 0.4;
+	grid-column: 2;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.document {
+	grid-column: 2/4;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px 0;
+
+	border-bottom: 1px solid #0000003e;
+}
+.documentMeta {
+	opacity: 0.4;
+}
+@media screen and (max-width: 768px) {
+	.h2 {
+		grid-column: 1/4;
+		padding-bottom: 6px;
+	}
+	.backButton {
+		grid-column: 1;
+		margin-bottom: 10px;
+	}
+	.document {
+		grid-column: 1/3;
+	}
+}

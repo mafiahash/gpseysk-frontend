@@ -1,0 +1,92 @@
+.button {
+	text-decoration: none;
+	transition: 0.3s all;
+	border-radius: 80px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 14px;
+}
+.variant_default {
+	border: 1px solid rgba(156, 156, 156, 0.23);
+	background: rgba(156, 156, 156, 0.1);
+}
+.variant_default:hover {
+	border: 1px solid rgba(5, 46, 28, 0.23);
+	background: rgba(5, 46, 28, 0.26);
+}
+.variant_default.active {
+	border: 1px solid rgba(5, 46, 28, 0.23);
+	background: rgba(5, 46, 28, 0.26);
+}
+
+.variant_primary {
+	border: 1px solid #052e1c;
+	background: #052e1c;
+	color: #ffffff;
+}
+.variant_primary:hover {
+}
+
+.variant_secondary {
+	border: 1px solid #fff;
+	background: #fff;
+	color: #052e1c;
+}
+.variant_secondary:hover {
+}
+
+.variant_outline {
+	color: #052e1c;
+	border: 1px solid #052e1c;
+}
+.variant_outline:hover {
+	background-color: #052e1c;
+	color: #fff;
+}
+
+.variant_transparent {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #052e1c;
+}
+.variant_transparent:hover {
+	border: 1px solid rgba(5, 46, 28, 0.23);
+	background: rgba(5, 46, 28, 0.25);
+}
+
+.size_default {
+	width: max-content;
+	padding: 11px 18px;
+	min-width: 150px;
+	min-height: 40px;
+	height: max-content;
+}
+.size_big {
+	width: max-content;
+	padding: 11px 18px;
+	min-width: 200px;
+	min-height: 60px;
+	height: max-content;
+}
+
+@media screen and (max-width: 1240px) {
+	.size_default {
+		padding: 9px 16px;
+		min-width: 130px;
+	}
+	.size_big {
+		width: max-content;
+		padding: 11px 14px;
+		min-width: 180px;
+		min-height: 50px;
+		height: max-content;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.size_default {
+		padding: 8px 14px;
+	}
+}

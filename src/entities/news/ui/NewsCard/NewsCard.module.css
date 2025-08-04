@@ -1,0 +1,83 @@
+.newsCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	aspect-ratio: 1/1;
+	background: rgba(5, 46, 28, 0.04);
+	text-decoration: none;
+	color: #000;
+}
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.text h4 {
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* Количество строк, которые показываем */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.text p {
+	display: -webkit-box;
+	-webkit-line-clamp: 5; /* Количество строк, которые показываем */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.d {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.d p {
+	opacity: 0.4;
+}
+.icon {
+	opacity: 0;
+	transition: 0.3s all;
+}
+.News:hover .icon {
+	opacity: 1;
+}
+@media screen and (max-width: 1240px) {
+	.icon {
+		width: 45px;
+		height: 45px;
+	}
+	.text {
+		gap: 15px;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.text {
+		gap: 10px;
+	}
+	.text p {
+		display: -webkit-box;
+		-webkit-line-clamp: 3; /* Количество строк, которые показываем */
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+@media screen and (max-width: 768px) {
+	.text p {
+		display: -webkit-box;
+		-webkit-line-clamp: 5; /* Количество строк, которые показываем */
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.text p {
+		display: -webkit-box;
+		-webkit-line-clamp: 3; /* Количество строк, которые показываем */
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

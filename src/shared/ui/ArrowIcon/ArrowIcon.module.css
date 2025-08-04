@@ -1,0 +1,25 @@
+.ArrowIcon {
+	align-self: flex-end;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+}
+@media screen and (max-width: 1240px) {
+	.ArrowIcon {
+		width: 45px;
+		height: 45px;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.ArrowIcon {
+		width: 40px;
+		height: 40px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.ArrowIcon {
+		width: 30px;
+		height: 30px;
+	}
+}

@@ -1,0 +1,78 @@
+.Link {
+	text-decoration: none;
+	transition: 0.3s all;
+	border-radius: 80px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.primary {
+	border: 1px solid #052e1c;
+	background: #052e1c;
+	color: #ffffff;
+}
+.primary:hover {
+}
+
+.secondary {
+	border: 1px solid #fff;
+	background: #fff;
+	color: #052e1c;
+}
+.secondary:hover {
+}
+
+.outline {
+	color: #052e1c;
+	border: 1px solid #052e1c;
+}
+.outline:hover {
+	background-color: #052e1c;
+	color: #fff;
+}
+
+.transparent {
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #052e1c;
+}
+.transparent:hover {
+	border: 1px solid rgba(5, 46, 28, 0.23);
+	background: rgba(5, 46, 28, 0.25);
+}
+
+.default {
+	width: max-content;
+	padding: 11px 18px;
+	min-width: 150px;
+	min-height: 40px;
+	height: max-content;
+}
+.big {
+	width: max-content;
+	padding: 11px 18px;
+	min-width: 200px;
+	min-height: 60px;
+	height: max-content;
+}
+
+@media screen and (max-width: 1240px) {
+	.default {
+		padding: 9px 16px;
+		min-width: 130px;
+	}
+	.big {
+		width: max-content;
+		padding: 11px 14px;
+		min-width: 180px;
+		min-height: 50px;
+		height: max-content;
+	}
+}
+@media screen and (max-width: 1040px) {
+	.default {
+		padding: 8px 14px;
+	}
+}

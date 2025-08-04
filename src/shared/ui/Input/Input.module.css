@@ -1,0 +1,23 @@
+.Input {
+	position: relative;
+	min-height: 50px;
+	border-radius: 80px;
+	border: 1px solid rgba(156, 156, 156, 0.23);
+	background: rgba(156, 156, 156, 0.1);
+
+	padding: 14px 20px;
+	font-size: 18px;
+	transition: all 0.3s;
+}
+.Input::placeholder {
+	color: #000;
+	opacity: 0.4;
+	font-family: Manrope;
+	font-size: 18px;
+	line-height: 120%;
+}
+.Input:focus-visible {
+	border: 1px solid rgba(5, 46, 28, 0.23);
+	background: rgba(5, 46, 28, 0.26);
+	outline: none;
+}

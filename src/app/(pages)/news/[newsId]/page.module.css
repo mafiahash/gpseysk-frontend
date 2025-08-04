@@ -1,0 +1,30 @@
+.newsPage {
+	row-gap: 20px;
+}
+.newsPage > * {
+	grid-column: 2/4;
+}
+.newsPage h1 {
+	text-align: center;
+	grid-column: 1/5;
+}
+.controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.controls p {
+	opacity: 0.4;
+}
+@media screen and (max-width: 768px) {
+	.newsPage {
+		row-gap: 15px;
+	}
+	.newsPage > * {
+		grid-column: 1/3;
+	}
+	.newsPage h1 {
+		text-align: center;
+		grid-column: 1/3;
+	}
+}
